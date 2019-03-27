@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>CSS Helper</title>
+		<meta charset="UTF-8">
+
+		<!-- favicon -->
+		<link rel="icon" type="image/png" href="img/favicon/icon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="img/favicon/icon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="img/favicon/icon-96x96.png" sizes="96x96">
+
+		<!-- Подключения шрифтов -->
+	    <link rel="stylesheet" href="css/fonts.css">
+
+	 	<!-- Собственные стили -->
+	    <link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="container">
+				<h1 class="title">CSS Helper</h1>
+				<button class="menu" id="menu">
+					<p id="menu-text">Меню</p>
+					<div class="icon">
+						<div class="row row1">
+							<div class="cell-icon"></div>
+							<div class="cell-icon"></div>
+							<div class="cell-icon"></div>
+						</div>
+						<div class="row">
+							<div class="cell-icon"></div>
+							<div class="cell-icon"></div>
+							<div class="cell-icon"></div>
+						</div>
+					</div>
+				</button>
+				<div class="content">
+					<div class="col col1">
+						<button class="cell" id="button-cell-1">Border Radius</button>
+						<button class="cell" id="button-cell-2">Border</button>
+						<button class="cell" id="button-cell-3">Transform</button>
+					</div>
+					<div class="col col2">
+						<button class="cell" id="button-cell-4">Box Shadow</button>
+						<button class="cell" id="button-cell-5">@Font Face</button>
+						<button class="cell" id="button-cell-6">Flex Box</button>
+					</div>
+					<div class="col col3">
+						<button class="cell" id="button-cell-7">Text Shadow</button>
+						<button class="cell" id="button-cell-8">RGBA</button>
+						<button class="cell" id="button-cell-9">Transition</button>
+					</div>
+
+					<div class="working-space" id="working-space">
+						<!-- Для 1 кнопки -->
+						<div class="container-for-button" id="working-space-container-1">
+							<div class="column-1">
+								<p>Верхний левый угол:</p>
+								<p>Верхний правый угол:</p>
+								<p>Нижний правый угол:</p>
+								<p>Нижний левый угол:</p>
+							</div>
+							<div class="column-2">
+								<input type="range" id="range-top-left" min="0" max="100" value="0" oninput="functionForWorkSpace1()">
+								<input type="range" id="range-top-right" min="0" max="100" value="0" oninput="functionForWorkSpace1()">
+								<input type="range" id="range-bottom-right" min="0" max="100" value="0" oninput="functionForWorkSpace1()">
+								<input type="range" id="range-bottom-left" min="0" max="100" value="0" oninput="functionForWorkSpace1()">
+							</div>
+							<div class="column-3">
+								<input type="text" id="text-top-left" placeholder="0" readonly>
+								<input type="text" id="text-top-right" placeholder="0" readonly>
+								<input type="text" id="text-bottom-right" placeholder="0" readonly>	
+								<input type="text" id="text-bottom-left" placeholder="0" readonly>			
+							</div>
+							<div class="column-4">
+								<p>%</p>
+								<p>%</p>
+								<p>%</p>
+								<p>%</p>
+							</div>
+						</div>
+
+						<!-- Для 2 кнопки -->
+						<div class="container-for-button" id="working-space-container-2">
+							<div class="column-1">
+								<p>Ширина:</p>
+								<p id="p-style-2">Стиль:</p>
+								<p id="p-rgba-2">RGBA:</p>
+							</div>
+							<div class="column-2">
+								<input type="text" id="border-width-2" onchange="functionForWorkSpace2()"><br>
+								<select name="inset" id="styleBorder-2" onchange="functionForWorkSpace2()">
+									<option value="solid">Solid</option>
+									<option value="dotted">Dotted</option>
+									<option value="dashed">Dashed</option>
+									<option value="double">Double</option>
+									<option value="groove">Groove</option>
+									<option value="ridge">Ridge</option>
+									<option value="inset">Inset</option>
+									<option value="outset">Outset</option>
+								</select>
+								<div id="rgba-2">
+									<input type="text" id="red-2" onchange="functionForWorkSpace2()">
+									<input type="text" id="green-2" onchange="functionForWorkSpace2()">
+									<input type="text" id="blue-2" onchange="functionForWorkSpace2()">
+									<input type="text" id="opacity-2" onchange="functionForWorkSpace2()">
+								</div>
+							</div>
+							<div class="column-3">
+								<p class="p-margin-left">px</p>
+							</div>
+						</div>
+
+						<!-- Для 3 кнопки -->
+						<div class="container-for-button" id="working-space-container-3">
+							<div class="column-1">
+								<p>Масштаб:</p>
+								<p>Поворот:</p>
+								<p>Перемещение:</p>
+								<p>Наклон:</p>
+							</div>
+							<div class="column-2">
+								<input type="text" id="scale-3" onchange="functionForWorkSpace3()">
+								<input type="text" id="rotate-3" onchange="functionForWorkSpace3()">
+								<input type="text" id="transform-3" onchange="functionForWorkSpace3()">
+								<input type="text" id="skew-3" onchange="functionForWorkSpace3()">
+							</div>
+							<div class="column-3">
+								<p></p>
+								<p id="move-below__column-3__container-3">deg</p>
+								<p>px</p>
+								<p id="move-higher__column-3__container-3">deg</p>
+							</div>
+							<div class="column-4">
+								<input type="text" id="transform2-3" onchange="functionForWorkSpace3()">
+								<input type="text" id="skew2-3" onchange="functionForWorkSpace3()">
+							</div>
+							<div class="column-5">
+								<p id="move-below__column-5__container-3">px</p>
+								<p id="move-below2__column-5__container-3">deg</p>
+							</div>
+							<div id="example-for-3">Example</div>
+						</div>
+
+						<!-- Для 4 кнопки -->
+						<div class="container-for-button" id="working-space-container-4">
+							<div class="column-1">
+								<p>Внутри:</p>
+								<p>Горизонтальная длина:</p>
+								<p>Вертикальная длина:</p>
+								<p>Радиус размытия:</p>
+								<p>Размах:</p>
+								<p>RGBA:</p>
+							</div>
+							<div class="column-2">
+								<select name="inset" id="inset-4" onchange="functionForWorkSpace4()">
+									<option value="">Нет</option>
+									<option value="inset">Да</option>
+								</select><br>
+								<input type="text" id="horizontal-length-4" onchange="functionForWorkSpace4()"><br>
+								<input type="text" id="vertical-length-4" onchange="functionForWorkSpace4()"><br>
+								<input type="text" id="blur-radius-4" onchange="functionForWorkSpace4()"><br>
+								<input type="text" id="spread-4" onchange="functionForWorkSpace4()"><br>
+								<div id="rgba-4">
+									<input type="text" id="red-4" onchange="functionForWorkSpace4()">
+									<input type="text" id="green-4" onchange="functionForWorkSpace4()">
+									<input type="text" id="blue-4" onchange="functionForWorkSpace4()">
+									<input type="text" id="opacity-4" onchange="functionForWorkSpace4()">
+								</div>
+							</div>
+						</div>
+
+						<!-- Для 5 кнопки -->
+						<div class="container-for-button" id="working-space-container-5">
+							<div class="column-1">
+								<p>Font Family:</p>
+								<p>Имя шрифта:</p>
+							</div>
+							<div class="column-2">
+								<input type="text" id="font-face-text-1" onchange="functionForWorkSpace5()">
+								<input type="text" id="font-face-text-2" onchange="functionForWorkSpace5()">
+							</div>
+						</div>
+
+						<!-- Для 6 кнопки -->
+						<div class="container-for-button" id="working-space-container-6">
+							<div class="column-1">
+								<p>Flex direction:</p>
+								<p>Flex wrap:</p>
+								<p>Justify content:</p>
+								<p>Align items:</p>
+							</div>
+							<div class="column-2">
+								<select name="flex-direction" id="flex-direction-6" onchange="functionForWorkSpace6()">
+									<option value="row">Row</option>
+									<option value="row-reverse">Row reverse</option>
+									<option value="column">Column</option>
+									<option value="column-reverse">Column reverse</option>
+								</select>
+								<select name="flex-wrap" id="flex-wrap-6" onchange="functionForWorkSpace6()">
+									<option value="wrap">Wrap</option>
+									<option value="nowrap">No wrap</option>
+									<option value="wrap-reverse">Wrap reverse</option>
+								</select>
+								<select name="justify-content" id="justify-content-6" onchange="functionForWorkSpace6()">
+									<option value="flex-start">Flex start</option>
+									<option value="flex-end">Flex end</option>
+									<option value="center">Center</option>
+									<option value="space-between">Space between</option>
+									<option value="space-around">Space around</option>
+								</select>
+								<select name="align-items" id="align-items-6" onchange="functionForWorkSpace6()">
+									<option value="flex-start">Flex start</option>
+									<option value="flex-end">Flex end</option>
+									<option value="center">Center</option>
+									<option value="baseline">Baseline</option>
+									<option value="stretch">Stretch</option>
+								</select>
+							</div>
+							<div class="example-for-6" id="example-for-6">
+								<div id="example-for-6-1"></div>
+								<div id="example-for-6-2"></div>
+								<div id="example-for-6-3"></div>
+							</div>
+						</div>
+
+						<!-- Для 7 кнопки -->
+						<div class="container-for-button" id="working-space-container-7">
+							<div class="column-1">
+								<p>Горизонтальная длина:</p>
+								<p>Вертикальная длина:</p>
+								<p>Радиус размытия:</p>
+								<p>RGBA:</p>
+							</div>
+							<div class="column-2">
+								<input type="text" id="horizontal-length-7" onchange="functionForWorkSpace7()"><br>
+								<input type="text" id="vertical-length-7" onchange="functionForWorkSpace7()"><br>
+								<input type="text" id="blur-radius-7" onchange="functionForWorkSpace7()"><br>
+								<div id="rgba-7">
+									<input type="text" id="red-7" onchange="functionForWorkSpace7()">
+									<input type="text" id="green-7" onchange="functionForWorkSpace7()">
+									<input type="text" id="blue-7" onchange="functionForWorkSpace7()">
+									<input type="text" id="opacity-7" onchange="functionForWorkSpace7()">
+								</div>
+							</div>
+						</div>
+
+						<!-- Для 8 кнопки -->
+						<div class="container-for-button" id="working-space-container-8">
+							<div class="column-1">
+								<p>Красный:</p>
+								<p>Зелёный:</p>
+								<p>Синий:</p>
+								<p>Прозрачность:</p>
+							</div>
+							<div class="column-2">
+								<input type="range" id="range-red-8" min="0" max="255" value="234" oninput="functionForWorkSpace8()">
+								<input type="range" id="range-green-8" min="0" max="255" value="234" oninput="functionForWorkSpace8()">
+								<input type="range" id="range-blue-8" min="0" max="255" value="234" oninput="functionForWorkSpace8()">
+								<input type="range" id="range-opacity-8" min="0" max="100" value="100" oninput="functionForWorkSpace8()">
+							</div>
+							<div class="column-3">
+								<input type="text" id="text-red-8" placeholder="234" readonly>
+								<input type="text" id="text-green-8" placeholder="234" readonly>
+								<input type="text" id="text-blue-8" placeholder="234" readonly>	
+								<input type="text" id="text-opacity-8" placeholder="1" readonly>	
+							</div>						
+						</div>
+
+						<!-- Для 9 кнопки -->
+						<div class="container-for-button" id="working-space-container-9">
+							<div class="column-1">
+								<p>Для чего:</p>
+								<p id="p-duration-9">Продолжительность:</p>
+								<p>Функция:</p>
+							</div>
+							<div class="column-2">
+								<select name="property" id="transition-property" onchange="functionForWorkSpace9()">
+									<option value="all">All</option>
+									<option value="background">Background</option>
+									<option value="color">Color</option>
+									<option value="height">Height</option>
+									<option value="width">Width</option>
+								</select>
+								<input type="text" id="transition-duration" onchange="functionForWorkSpace9()">
+								<select name="function" id="transition-function" onchange="functionForWorkSpace9()">
+									<option value="ease">Ease</option>
+									<option value="linear">Linear</option>
+									<option value="ease-in">Ease-In</option>
+									<option value="ease-out">Ease-Out</option>
+									<option value="ease-in-out">Ease-In-Out</option>
+								</select>
+							</div>
+							<div class="column-3">
+								<p id="p-second-9">сек</p>
+							</div>
+							<div id="example-for-9">Example</div>
+						</div>
+					</div>
+				</div>
+				<div class="copy-code" id="copy-code"></div>
+				<h6 class="author">Vlad Kishkin</h6>
+			</div>
+		</div>
+		<script src="js/script.js"></script> <!-- Скрипт -->
+	</body>
+</html>

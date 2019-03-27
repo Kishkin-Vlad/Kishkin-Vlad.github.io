@@ -1,0 +1,20 @@
+@font-face {
+	font-family: "MLight";
+	src: url(../fonts/Montserrat-Light/Montserrat-Light.eot),
+		 url(../fonts/Montserrat-Light/Montserrat-Light.eot?#iefix) format('embedded-opentype'),
+	     url(../fonts/Montserrat-Light/Montserrat-Light.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RobotoMono';
+	src: url(../fonts/Roboto/robotomono.eot),
+		 url(../fonts/Roboto/robotomono.eot?#iefix) format('embedded-opentype'),
+		 url(../fonts/Roboto/robotomono.woff) format('woff'),
+		 url(../fonts/Roboto/robotomono.woff2) format('woff2'),
+		 url(../fonts/Roboto/robotomono.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+
+}
