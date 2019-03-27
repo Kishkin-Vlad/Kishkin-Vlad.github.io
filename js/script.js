@@ -1,4 +1,4 @@
-﻿/*  ПОЛУЧАЕМ ДАННЫЕ ИЗ БЛОКОВ  */
+/*  ПОЛУЧАЕМ ДАННЫЕ ИЗ БЛОКОВ  */
 
 // Блок меню
 var elemMenu = document.getElementById('menu');
@@ -204,7 +204,7 @@ function functionForWorkSpace3() {
 
 	// Вписывание кода
 	elemCopyCode.style.display = 'block';
-	elemCopyCode.innerHTML = '-moz-transform:' + str + ';<br>' + '-webkit-transform:' + str + ';<br>' + '-o-transform:' + str + ';<br>' + '-ms-transform:' + str + ';<br>' + 'transform:' + str + ';';
+	elemCopyCode.innerHTML = '-moz-transform:' + str + '<br>' + '-webkit-transform:' + str + '<br>' + '-o-transform:' + str + '<br>' + '-ms-transform:' + str + '<br>' + 'transform:' + str + '<br>';
 }
 
 
@@ -317,7 +317,7 @@ function functionForWorkSpace8() {
 	tOpacity.value = rOpacity / 100;
 
 	// Изменение блока	
-	elemWorkSpace.style.backgroundColor = 'rgba(' + tRed.value + ', ' + tGreen.value + ', ' + tBlue.value + ', ' + tOpacity.value + ')';
+	elemWorkSpace.style.backgroundColor = 'rgba( ' + tRed.value + ', ' + tGreen.value + ', ' + tBlue.value + ', ' + tOpacity.value + ')';
 
 	// Вписывание кода
 	elemCopyCode.style.display = 'block';
